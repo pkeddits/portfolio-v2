@@ -44,7 +44,12 @@ portfolio-v2/
     ├── routes/
     │   └── api.js                     # Definição das rotas da API
     └── services/
-        └── claudeService.js           # Integração com a API do Groq
+    └── claudeService.js   # Integração com a API do Groq (LLaMA 3).
+                           # O arquivo mantém o nome original "claudeService"
+                           # pois foi criado durante o desenvolvimento com a
+                           # API da Anthropic (Claude). Ao descobrir que era
+                           # paga, a integração foi migrada para o Groq,
+                           # que oferece acesso gratuito ao LLaMA 3.
 ```
 
 ---
