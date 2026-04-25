@@ -2,10 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Felipe | Desenvolvedor & Cloud</title>
-<meta name="description" content="Portfólio de Felipe — Desenvolvedor, Cloud & Infra, Tecnologia">
+<title>Felipe Lima · Cloud · Cybersecurity · Infrastructure</title>
+<meta name="description" content="Portfólio de Felipe Lima — Cloud Computing, Cybersecurity e Infraestrutura de TI. Background em desenvolvimento web como diferencial técnico.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -424,8 +423,15 @@
     text-align: center; transition: all 0.3s;
   }
   .skill-card:hover { border-color: rgba(245,166,35,0.4); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(245,166,35,0.08); }
+  .skill-card.meta { opacity: 0.6; border-style: dashed; }
+  .skill-card.meta:hover { opacity: 0.85; }
   .skill-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
   .skill-name { font-size: 0.85rem; font-weight: 500; color: var(--text); }
+  .skill-badge {
+    font-size: 0.65rem; color: var(--gold); font-weight: 600;
+    background: rgba(245,166,35,0.1); border-radius: 4px;
+    padding: 0.1rem 0.4rem; margin-top: 0.3rem; display: inline-block;
+  }
 
   /* FORMACAO */
   #formacao { background: var(--bg); }
@@ -452,6 +458,9 @@
       rgba(245,166,35,0.03) 10px, rgba(245,166,35,0.03) 20px
     );
   }
+  .cert-list { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+  .cert-list li { font-size: 0.875rem; color: var(--muted); display: flex; align-items: flex-start; gap: 0.5rem; }
+  .cert-list li::before { content: '•'; color: var(--gold); flex-shrink: 0; }
 
   /* CONTATO */
   #contato { background: var(--bg2); }
@@ -485,6 +494,14 @@
     margin-top: 2.5rem;
     display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
   }
+  .open-to-work {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3);
+    color: #22c55e; border-radius: 999px;
+    padding: 0.4rem 1rem; font-size: 0.82rem; font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .open-to-work::before { content: ''; width: 6px; height: 6px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
 
   /* FOOTER */
   footer {
@@ -631,15 +648,15 @@
         <span id="typed-text"></span><span class="cursor"></span>
       </div>
       <p class="hero-desc">
-        Desenvolvedor apaixonado por tecnologia, cloud e soluções que fazem a diferença.
-        Construindo o futuro, uma linha de código por vez.
+        Construindo soluções em Cloud, Infraestrutura e Cybersecurity.<br>
+        Background em desenvolvimento web como diferencial técnico.
       </p>
       <div class="hero-btns">
-        <a href="https://drive.google.com/file/d/1WSJujaD9w5SkP8TlM9yK1-8mnJnCZ26G/view?usp=sharing" class="btn-primary">
+        <a href="#" class="btn-primary">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
           Baixar Currículo
         </a>
-        <a href="https://www.linkedin.com/in/felipe-pereira-lima-35904b305/" target="_blank" class="btn-outline">
+        <a href="https://linkedin.com/in/limaxx" target="_blank" class="btn-outline">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
@@ -659,14 +676,14 @@
             <span class="avatar-initials">F</span>
           </div>
         </div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> Cloud & Infra</div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> Full Stack Dev</div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> AWS · Azure</div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> Docker</div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> React · Node</div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> suporte tecnico</div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> Python · Java</div>
-        <div class="floating-badge"><span class="badge-dot">◆</span> DevOps</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Cloud AWS</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Cybersecurity</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Linux & Infra</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Redes</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Python</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Dev Web</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Git · GitHub</div>
+        <div class="floating-badge"><span class="badge-dot">◆</span> Hardening</div>
       </div>
     </div>
   </div>
@@ -679,21 +696,22 @@
       <div class="about-text reveal">
         <p class="section-label">Sobre mim</p>
         <h2 class="section-title">Tecnologia é minha <span class="gradient-text">paixão</span></h2>
-        <p>Sou Felipe, um desenvolvedor em constante evolução, apaixonado por transformar ideias em soluções tecnológicas reais. Minha jornada começou pela curiosidade — querer entender como as coisas funcionam por dentro.</p>
-        <p>Tenho me dedicado intensamente ao universo de cloud, infraestrutura, segurança da infromação e desenvolvimento, construindo uma base técnica sólida em plataformas como AWS, Azure e Google Cloud, além de desenvolvimento full-stack com tecnologias modernas.</p>
-        <p>Busco minha primeira oportunidade em TI, onde possa contribuir com energia, disposição para aprender e um olhar analítico para resolver problemas. Acredito que comunicação, trabalho em equipe e proatividade são diferenciais tão importantes quanto o conhecimento técnico.</p>
+        <p>Sou estudante de Análise e Desenvolvimento de Sistemas (Cruzeiro do Sul, conclusão 2026), com foco em Cloud Computing, Cybersecurity e Infraestrutura de TI.</p>
+        <p>Minha trajetória não começou em TI — vim do audiovisual, onde atuei por 3 anos como editor de vídeo freelancer. Essa experiência me deu algo que a maioria dos candidatos técnicos não tem: disciplina de entrega, comunicação direta com cliente e capacidade de aprender ferramentas novas rápido. Hoje aplico isso no estudo técnico diário.</p>
+        <p>Tenho base em desenvolvimento web (front-end e back-end), com projetos reais em produção — e uso esse conhecimento como diferencial em infraestrutura e segurança. Entender como uma aplicação funciona por dentro torna o trabalho de cloud e cyber muito mais eficaz.</p>
+        <p>Construo projetos práticos documentados no GitHub para provar na prática o que aprendo — não só teoria.</p>
         <div class="about-stats">
           <div class="stat-card">
-            <div class="stat-num">5+</div>
-            <div class="stat-label">Tecnologias dominadas</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">5+</div>
-            <div class="stat-label">Projetos desenvolvidos</div>
-          </div>
-          <div class="stat-card">
             <div class="stat-num">3</div>
-            <div class="stat-label">Plataformas Cloud</div>
+            <div class="stat-label">Pilares — Cloud · Cybersecurity · Infra</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Anos de experiência profissional (audiovisual)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">2026</div>
+            <div class="stat-label">Meta: AWS Cloud Practitioner + Security+</div>
           </div>
           <div class="stat-card">
             <div class="stat-num">100%</div>
@@ -704,8 +722,8 @@
       <div class="about-img-side reveal">
         <div class="about-card">
           <div class="about-card-avatar">F</div>
-          <h3>Felipe</h3>
-          <p>Desenvolvedor & Cloud Engineer</p>
+          <h3>Felipe Lima</h3>
+          <p>TI · Cloud · Cybersecurity</p>
           <div class="about-card-info">
             <div class="about-card-row">
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -742,40 +760,37 @@
     <div class="timeline">
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2025 - 2026 — Presente</div>
+        <div class="timeline-date">2025 — Presente</div>
         <div class="timeline-card">
-          <h3>Estudante de Tecnologia</h3>
+          <h3>Estudante de TI — Foco em Cloud & Cybersecurity</h3>
           <div class="company">Cruzeiro do Sul — Análise e Desenvolvimento de Sistemas</div>
-          <p>Desenvolvendo base sólida em programação, banco de dados, redes e arquitetura de sistemas. Projetos práticos com Java, Python, React e cloud computing.</p>
+          <p>Desenvolvendo base técnica sólida com foco em Cloud Computing, Linux, Redes e Segurança da Informação. Projetos práticos documentados no GitHub para consolidar o aprendizado além da teoria.</p>
           <div class="timeline-tags">
-            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">React</span><span class="tag">Cloud</span><span class="tag">Banco de Dados</span>
+            <span class="tag">Cloud AWS</span><span class="tag">Linux</span><span class="tag">Redes</span><span class="tag">Cybersecurity</span><span class="tag">Python</span>
           </div>
         </div>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2022 — 2025</div>
+        <div class="timeline-date">2023 — 2025</div>
         <div class="timeline-card">
-          <h3>Editor De Video Freelancer</h3>
-          <div class="company">Freelancer Autonomo</div>
-          <p>Edição e montagem de vídeos para redes sociais e YouTube
-Tratamento de áudio e imagem, correção de cor e legendas
-Aplicação de efeitos, transições e identidade visual
-Entrega dentro do prazo e alinhamento direto com clientes</p>
+          <h3>Desenvolvedor Web Freelancer</h3>
+          <div class="company">Projetos independentes — Front-end & Back-end</div>
+          <p>Construção de aplicações web reais com entrega em produção. Projetos para barbearia, agência de marketing e plataforma de nutrição com IA — desenvolvendo habilidades técnicas e de gestão de projetos com cliente.</p>
           <div class="timeline-tags">
-            <span class="tag">Comunicação</span><span class="tag">Trabalho em equipe</span><span class="tag">Responsabilidade</span><span class="tag">Proatividade</span>
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">AWS S3</span>
           </div>
         </div>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2026</div>
+        <div class="timeline-date">2020 — 2023</div>
         <div class="timeline-card">
-          <h3>Desenvolvedor Full Stack Freelancer</h3>
-          <div class="company">Freelancer Autonomo</div>
-          <p>Desenvolvimento de sites e aplicações web do zero, atuando em todas as etapas do projeto — desde a estruturação do front-end até a integração com banco de dados.</p>
+          <h3>Editor de Vídeo Freelancer</h3>
+          <div class="company">Audiovisual — 3 anos de experiência profissional</div>
+          <p>Atuação como editor freelancer por 3 anos, desenvolvendo disciplina de entrega, comunicação direta com cliente e capacidade de aprender ferramentas novas com rapidez. Habilidades que hoje são aplicadas diretamente no estudo técnico e em projetos de TI.</p>
           <div class="timeline-tags">
-            <span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">React</span><span class="tag">Node.js</span>
+            <span class="tag">Adobe Premiere</span><span class="tag">After Effects</span><span class="tag">Comunicação</span><span class="tag">Gestão de projetos</span>
           </div>
         </div>
       </div>
@@ -789,7 +804,7 @@ Entrega dentro do prazo e alinhamento direto com clientes</p>
     <div class="reveal">
       <p class="section-label">Portfólio</p>
       <h2 class="section-title">Projetos <span class="gradient-text">Destacados</span></h2>
-      <p class="section-sub">Soluções reais construídas com as melhores tecnologias do mercado.</p>
+      <p class="section-sub">Soluções reais construídas e documentadas — do desenvolvimento web à infraestrutura cloud.</p>
     </div>
 
     <!-- CONCLUÍDOS -->
@@ -799,93 +814,79 @@ Entrega dentro do prazo e alinhamento direto com clientes</p>
       <span>— entregues e funcionando</span>
     </div>
     <div class="projects-grid">
+
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">☁️</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#1a1200,#2d1f00)">💈</div>
         <div class="project-body">
-          <h3 class="project-title">Sistema de Agendamento - Barbearia</h3>
-          <p class="project-desc">Website desenvolvido para uma barbearia com foco em presença online e agendamento de clientes, O projeto inclui interface moderna e integração com backend utilizando Supabase para gerenciamento de dados.</p>
+          <h3 class="project-title">Lucks Studio — Sistema de Agendamento</h3>
+          <p class="project-desc">Barbearia precisava de presença digital com sistema de agendamento integrado. Solução: aplicação web com autenticação, cadastro de serviços e controle de agendamentos em tempo real.</p>
           <div class="project-stack">
-            <span class="tech-pill">React</span><span class="tech-pill">JavaScript</span><span class="tech-pill">TypeScript</span><span class="tech-pill">Supabase</span>
+            <span class="tech-pill">React</span><span class="tech-pill">TypeScript</span><span class="tech-pill">Supabase</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/pkeddits/LUCKS-STUDIO" target="_blank" class="project-link">GitHub</a>
-            <a href="https://lucks-studio.vercel.app" class="project-link">Demo →</a>
+            <a href="https://github.com/pkeddits" target="_blank" class="project-link">GitHub</a>
           </div>
         </div>
       </div>
+
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#0a2018,#0f3d24)">🌐</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#0d1a2e,#1a2d4a)">📢</div>
         <div class="project-body">
-          <h3 class="project-title">Website Institucional - Agência de Marketing</h3>
-          <p class="project-desc">Website institucional desenvolvido para uma agência de marketing digital, com foco em apresentar serviços portfólio e informações da empresa de forma clara e profissional.</p>
+          <h3 class="project-title">Strike Media — Site Institucional</h3>
+          <p class="project-desc">Agência de marketing precisava de site profissional para converter visitantes em leads. Solução: landing page responsiva com design moderno e alta performance.</p>
           <div class="project-stack">
-            <span class="tech-pill">html</span><span class="tech-pill">css</span><span class="tech-pill">javascript</span><span class="tech-pill">typescript</span>
+            <span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">TypeScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/pkeddits/strikemediacompany" target="_blank" class="project-link">GitHub</a>
+            <a href="https://github.com/pkeddits" target="_blank" class="project-link">GitHub</a>
           </div>
         </div>
       </div>
+
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#1a0a0a,#2d1111)">📊</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#0a2018,#0f3d24)">🥗</div>
         <div class="project-body">
           <h3 class="project-title">NutriAI</h3>
-          <p class="project-desc">é uma aplicação web de nutrição e saúde, O sistema utiliza:
+          <p class="project-desc">Aplicação web de nutrição com inteligência artificial integrada para personalização de dietas e recomendações nutricionais automáticas.</p>
+          <div class="project-stack">
+            <span class="tech-pill">React</span><span class="tech-pill">TypeScript</span><span class="tech-pill">API OpenAI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/pkeddits/nutriai" target="_blank" class="project-link">GitHub</a>
+            <a href="https://nutriai-lovat.vercel.app/" target="_blank" class="project-link">Demo →</a>
+          </div>
+        </div>
+      </div>
 
-Front-end web
-Banco de dados (Supabase)
-Integração com IA (API da OpenAI)
-Autenticação de usuários
-
-O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde de forma prática e personalizada.</p>
-          <div class="project-stack">
-            <span class="tech-pill">supabase</span><span class="tech-pill">api</span><span class="tech-pill">banco de dados</span><span class="tech-pill">frontend</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-            <a href="#" class="project-link">Demo →</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#0d1a2e,#1a2d4a)">📊</div>
-        <div class="project-body">
-          <h3 class="project-title">Sistema de Monitoramento de Rede</h3>
-          <p class="project-desc">Ferramenta para monitoramento de infraestrutura de rede, com dashboards em tempo real e notificações de incidentes.</p>
-          <div class="project-stack">
-            <span class="tech-pill">Python</span><span class="tech-pill">JavaScript</span><span class="tech-pill">Redes</span><span class="tech-pill">Shell</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#1a1200,#2d2000)">⚙️</div>
-        <div class="project-body">
-          <h3 class="project-title">Automação com Scripts Python</h3>
-          <p class="project-desc">Conjunto de scripts para automação de tarefas repetitivas: backup, relatórios automáticos, integração com APIs externas e notificações.</p>
-          <div class="project-stack">
-            <span class="tech-pill">Python</span><span class="tech-pill">Shell</span><span class="tech-pill">Cron</span><span class="tech-pill">APIs</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-          </div>
-        </div>
-      </div>
       <div class="project-card reveal">
         <div class="project-preview" style="background:linear-gradient(135deg,#1a1200,#3d2d00)">⚡</div>
         <div class="project-body">
-          <h3 class="project-title">Portfólio v1 — LimaxxTech</h3>
-          <p class="project-desc">Versão anterior do portfólio pessoal, construído com foco em performance e deploy contínuo via Vercel.</p>
+          <h3 class="project-title">Portfólio Pessoal — Versão Anterior</h3>
+          <p class="project-desc">Primeira versão do portfólio pessoal, desenvolvida como ponto de partida da presença digital. Mostra a evolução do design e das habilidades técnicas ao longo do tempo.</p>
           <div class="project-stack">
-            <span class="tech-pill">React</span><span class="tech-pill">Next.js</span><span class="tech-pill">Vercel</span><span class="tech-pill">CSS</span>
+            <span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JavaScript</span>
           </div>
           <div class="project-links">
             <a href="https://limaxx-tech-portfolio.vercel.app" target="_blank" class="project-link">Demo ao Vivo →</a>
           </div>
         </div>
       </div>
+
+      <div class="project-card reveal">
+        <div class="project-preview" style="background:linear-gradient(135deg,#1a0a00,#2d1800)">🌐</div>
+        <div class="project-body">
+          <h3 class="project-title">limaxx.space — Este Portfólio</h3>
+          <p class="project-desc">Portfólio pessoal atual, apresentando trajetória técnica, projetos e posicionamento profissional em Cloud, Cybersecurity e Infraestrutura. Chatbot com IA integrado.</p>
+          <div class="project-stack">
+            <span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JavaScript</span><span class="tech-pill">Node.js</span><span class="tech-pill">Groq API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/pkeddits/portfolio-v2" target="_blank" class="project-link">GitHub</a>
+            <a href="https://limaxx.space" target="_blank" class="project-link">Ver site →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- EM ANDAMENTO -->
@@ -895,82 +896,101 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
       <span>— desenvolvimento ativo</span>
     </div>
     <div class="projects-grid">
+
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#0f2027,#203a43)">🚀</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#0a1a0a,#162d16)">🐧</div>
         <div class="project-body">
-          <h3 class="project-title">Plataforma SaaS Multi-tenant</h3>
-          <p class="project-desc">Plataforma SaaS com isolamento por tenant, planos de assinatura, dashboard analítico e integração com gateway de pagamento.</p>
+          <h3 class="project-title">Servidor Linux Hardenizado</h3>
+          <p class="project-desc">Ubuntu Server configurado com SSH, UFW, Fail2Ban e Nginx. Documentação completa do processo de hardening e configuração de segurança.</p>
           <div class="project-stack">
-            <span class="tech-pill">React</span><span class="tech-pill">Java</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Stripe</span>
+            <span class="tech-pill">Linux</span><span class="tech-pill">Bash</span><span class="tech-pill">Nginx</span><span class="tech-pill">UFW</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-            <span class="project-link" style="border-color:rgba(234,179,8,0.3);color:#eab308;cursor:default;">Em progresso</span>
+            <span class="project-link" style="border-color:rgba(234,179,8,0.3);color:#eab308;cursor:default;">Em desenvolvimento</span>
           </div>
         </div>
       </div>
+
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#0a2018,#162d1a)">🔄</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#1a1200,#2d2000)">🐍</div>
         <div class="project-body">
-          <h3 class="project-title">Sistema de Deploy Automatizado</h3>
-          <p class="project-desc">Pipeline completo de CI/CD com GitHub Actions, testes automatizados, análise de qualidade de código e deploy blue-green em AWS.</p>
+          <h3 class="project-title">Python Sysadmin Toolkit</h3>
+          <p class="project-desc">Scripts de automação para sysadmin: monitoramento de recursos, backup automatizado e análise de logs do sistema.</p>
           <div class="project-stack">
-            <span class="tech-pill">GitHub Actions</span><span class="tech-pill">AWS ECS</span><span class="tech-pill">Terraform</span><span class="tech-pill">Docker</span>
+            <span class="tech-pill">Python</span><span class="tech-pill">Linux</span><span class="tech-pill">Bash</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com" target="_blank" class="project-link">GitHub</a>
-            <span class="project-link" style="border-color:rgba(234,179,8,0.3);color:#eab308;cursor:default;">Em progresso</span>
+            <span class="project-link" style="border-color:rgba(234,179,8,0.3);color:#eab308;cursor:default;">Em desenvolvimento</span>
           </div>
         </div>
       </div>
+
+      <div class="project-card reveal">
+        <div class="project-preview" style="background:linear-gradient(135deg,#0d1a2e,#1a2d4a)">🔌</div>
+        <div class="project-body">
+          <h3 class="project-title">Lab de Redes Cisco</h3>
+          <p class="project-desc">Topologia corporativa com VLANs, roteamento inter-VLAN e ACLs simulada no Packet Tracer. Documentação técnica completa.</p>
+          <div class="project-stack">
+            <span class="tech-pill">Cisco Packet Tracer</span><span class="tech-pill">VLANs</span><span class="tech-pill">Roteamento</span>
+          </div>
+          <div class="project-links">
+            <span class="project-link" style="border-color:rgba(234,179,8,0.3);color:#eab308;cursor:default;">Em desenvolvimento</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- FUTUROS -->
+    <!-- PRÓXIMOS PROJETOS -->
     <div class="projects-section-label reveal">
       <div class="status-dot blue"></div>
       <h3>Próximos Projetos</h3>
       <span>— roadmap de desenvolvimento</span>
     </div>
     <div class="projects-grid">
+
       <div class="project-card reveal" style="opacity:0.75">
-        <div class="project-preview" style="background:linear-gradient(135deg,#0c1445,#1a2060)">🤖</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#1a0a0a,#2d1111)">☁️</div>
         <div class="project-body">
-          <h3 class="project-title">Plataforma com IA Integrada</h3>
-          <p class="project-desc">Aplicação full-stack com integração de LLMs para análise de dados, geração de relatórios automáticos e assistente conversacional.</p>
+          <h3 class="project-title">Deploy na AWS (EC2 + S3 + IAM + VPC)</h3>
+          <p class="project-desc">Aplicação em produção com arquitetura cloud segura e escalável, documentada com diagrama de infraestrutura completo.</p>
           <div class="project-stack">
-            <span class="tech-pill">React</span><span class="tech-pill">Python</span><span class="tech-pill">LLM API</span><span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">AWS</span><span class="tech-pill">Linux</span><span class="tech-pill">Nginx</span>
           </div>
           <div class="project-links">
             <span class="project-link" style="border-color:rgba(96,165,250,0.3);color:#60a5fa;cursor:default;">Planejado 2026</span>
           </div>
         </div>
       </div>
+
       <div class="project-card reveal" style="opacity:0.75">
-        <div class="project-preview" style="background:linear-gradient(135deg,#1a0d2e,#2e1a4a)">📱</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#0a1a0a,#152215)">🛡️</div>
         <div class="project-body">
-          <h3 class="project-title">App Mobile + Backend Cloud</h3>
-          <p class="project-desc">App mobile cross-platform integrado com backend serverless em AWS Lambda, banco de dados DynamoDB e autenticação Cognito.</p>
+          <h3 class="project-title">Cyber Hardening Lab</h3>
+          <p class="project-desc">Auditoria de servidor com Lynis, scan com Nmap e hardening documentado com score antes/depois. Análise real de superfície de ataque.</p>
           <div class="project-stack">
-            <span class="tech-pill">React Native</span><span class="tech-pill">AWS Lambda</span><span class="tech-pill">DynamoDB</span><span class="tech-pill">Cognito</span>
+            <span class="tech-pill">Linux</span><span class="tech-pill">Nmap</span><span class="tech-pill">Lynis</span>
           </div>
           <div class="project-links">
             <span class="project-link" style="border-color:rgba(96,165,250,0.3);color:#60a5fa;cursor:default;">Planejado 2026</span>
           </div>
         </div>
       </div>
+
       <div class="project-card reveal" style="opacity:0.75">
-        <div class="project-preview" style="background:linear-gradient(135deg,#0a1a0a,#152215)">🧠</div>
+        <div class="project-preview" style="background:linear-gradient(135deg,#0f2027,#203a43)">⚙️</div>
         <div class="project-body">
-          <h3 class="project-title">Monitoramento com Machine Learning</h3>
-          <p class="project-desc">Sistema de monitoramento de infraestrutura com detecção de anomalias baseada em ML, predição de falhas e alertas inteligentes.</p>
+          <h3 class="project-title">Terraform AWS</h3>
+          <p class="project-desc">Toda a infraestrutura AWS provisionada como código — reproduzível, versionada e documentada. Infraestrutura as Code na prática.</p>
           <div class="project-stack">
-            <span class="tech-pill">Python</span><span class="tech-pill">TensorFlow</span><span class="tech-pill">Grafana</span><span class="tech-pill">Prometheus</span>
+            <span class="tech-pill">Terraform</span><span class="tech-pill">AWS</span><span class="tech-pill">IaC</span>
           </div>
           <div class="project-links">
             <span class="project-link" style="border-color:rgba(96,165,250,0.3);color:#60a5fa;cursor:default;">Planejado 2026</span>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -986,7 +1006,7 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
       <div class="diff-card reveal"><div class="diff-icon">🎯</div><h4>Liderança</h4><p>Capacidade de guiar equipes, tomar iniciativa e motivar pessoas em torno de objetivos comuns.</p></div>
       <div class="diff-card reveal"><div class="diff-icon">💬</div><h4>Comunicação</h4><p>Transmite ideias com clareza, tanto técnicas quanto estratégicas, para diferentes perfis de audiência.</p></div>
       <div class="diff-card reveal"><div class="diff-icon">🤝</div><h4>Trabalho em Equipe</h4><p>Colaborativo e proativo, contribui ativamente para o crescimento coletivo do time.</p></div>
-      <div class="diff-card reveal"><div class="diff-icon">🌱</div><h4>Aprendizado Rápido</h4><p>Absorve novas tecnologias e conceitos com velocidade, sempre buscando o próximo nível.</p></div>
+      <div class="diff-card reveal"><div class="diff-icon">🌱</div><h4>Aprendizado Rápido</h4><p>Absorve novas tecnologias e conceitos com velocidade — comprovado pela transição do audiovisual para TI.</p></div>
       <div class="diff-card reveal"><div class="diff-icon">🧠</div><h4>Pensamento Analítico</h4><p>Abordagem estruturada para resolução de problemas, com foco em causa raiz e soluções sustentáveis.</p></div>
       <div class="diff-card reveal"><div class="diff-icon">🔄</div><h4>Adaptabilidade</h4><p>Navega bem em ambientes de mudança, mantendo foco e qualidade mesmo sob pressão.</p></div>
       <div class="diff-card reveal"><div class="diff-icon">🌍</div><h4>Inglês Intermediário</h4><p>Leitura técnica fluente em inglês, com capacidade de comunicação escrita em contexto profissional.</p></div>
@@ -1001,39 +1021,63 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
     <div class="reveal">
       <p class="section-label">Tecnologias</p>
       <h2 class="section-title">Minhas <span class="gradient-text">Skills</span></h2>
-      <p class="section-sub">Stack completo cobrindo cloud, infraestrutura segurança da informação e desenvolvimento full-stack.</p>
+      <p class="section-sub">Cloud, Cybersecurity e Infraestrutura como foco principal — com background sólido em desenvolvimento web.</p>
     </div>
     <div class="skills-tabs">
       <button class="skills-tab active" onclick="switchTab('cloud', this)">☁️ Cloud & Infra</button>
-      <button class="skills-tab" onclick="switchTab('dev', this)">💻 Desenvolvimento</button>
-      <button class="skills-tab" onclick="switchTab('redes', this)">🌐 Redes & Suporte</button>
+      <button class="skills-tab" onclick="switchTab('cyber', this)">🛡️ Cybersecurity</button>
+      <button class="skills-tab" onclick="switchTab('prog', this)">🐍 Programação</button>
+      <button class="skills-tab" onclick="switchTab('dev', this)">💻 Dev Web</button>
+      <button class="skills-tab" onclick="switchTab('tools', this)">🔧 Ferramentas</button>
     </div>
+
     <div id="tab-cloud" class="skills-panel active">
       <div class="skill-card"><span class="skill-icon">☁️</span><span class="skill-name">AWS</span></div>
-      <div class="skill-card"><span class="skill-icon">🔷</span><span class="skill-name">Azure</span></div>
-      <div class="skill-card"><span class="skill-icon">🌩️</span><span class="skill-name">Google Cloud</span></div>
-      <div class="skill-card"><span class="skill-icon">🐳</span><span class="skill-name">Docker</span></div>
-      <div class="skill-card"><span class="skill-icon">⚙️</span><span class="skill-name">CI/CD</span></div>
+      <div class="skill-card"><span class="skill-icon">🐧</span><span class="skill-name">Linux</span></div>
+      <div class="skill-card"><span class="skill-icon">🔀</span><span class="skill-name">Git</span></div>
       <div class="skill-card"><span class="skill-icon">🐙</span><span class="skill-name">GitHub</span></div>
+      <div class="skill-card"><span class="skill-icon">💻</span><span class="skill-name">VirtualBox</span></div>
+      <div class="skill-card meta"><span class="skill-icon">🐳</span><span class="skill-name">Docker</span><span class="skill-badge">Em estudo</span></div>
+      <div class="skill-card meta"><span class="skill-icon">⚙️</span><span class="skill-name">Terraform</span><span class="skill-badge">Em estudo</span></div>
+      <div class="skill-card meta"><span class="skill-icon">🔷</span><span class="skill-name">Azure</span><span class="skill-badge">Meta</span></div>
+      <div class="skill-card meta"><span class="skill-icon">🌩️</span><span class="skill-name">Google Cloud</span><span class="skill-badge">Meta</span></div>
+      <div class="skill-card meta"><span class="skill-icon">🚢</span><span class="skill-name">Kubernetes</span><span class="skill-badge">Meta</span></div>
     </div>
-    <div id="tab-dev" class="skills-panel">
-      <div class="skill-card"><span class="skill-icon">☕</span><span class="skill-name">Java</span></div>
+
+    <div id="tab-cyber" class="skills-panel">
+      <div class="skill-card"><span class="skill-icon">🛡️</span><span class="skill-name">Hardening</span></div>
+      <div class="skill-card"><span class="skill-icon">🎯</span><span class="skill-name">TryHackMe</span></div>
+      <div class="skill-card"><span class="skill-icon">🔍</span><span class="skill-name">Nmap</span></div>
+      <div class="skill-card"><span class="skill-icon">📡</span><span class="skill-name">Wireshark</span></div>
+      <div class="skill-card"><span class="skill-icon">📊</span><span class="skill-name">Análise de Logs</span></div>
+    </div>
+
+    <div id="tab-prog" class="skills-panel">
       <div class="skill-card"><span class="skill-icon">🐍</span><span class="skill-name">Python</span></div>
-      <div class="skill-card"><span class="skill-icon">⚛️</span><span class="skill-name">React</span></div>
+      <div class="skill-card"><span class="skill-icon">💻</span><span class="skill-name">Bash</span></div>
       <div class="skill-card"><span class="skill-icon">🟨</span><span class="skill-name">JavaScript</span></div>
       <div class="skill-card"><span class="skill-icon">🔷</span><span class="skill-name">TypeScript</span></div>
       <div class="skill-card"><span class="skill-icon">💙</span><span class="skill-name">C#</span></div>
+      <div class="skill-card"><span class="skill-icon">☕</span><span class="skill-name">Java</span></div>
+    </div>
+
+    <div id="tab-dev" class="skills-panel">
+      <div class="skill-card"><span class="skill-icon">⚛️</span><span class="skill-name">React</span></div>
       <div class="skill-card"><span class="skill-icon">🟢</span><span class="skill-name">Node.js</span></div>
       <div class="skill-card"><span class="skill-icon">🌐</span><span class="skill-name">HTML/CSS</span></div>
+      <div class="skill-card"><span class="skill-icon">🟩</span><span class="skill-name">Supabase</span></div>
+      <div class="skill-card"><span class="skill-icon">🐘</span><span class="skill-name">PostgreSQL</span></div>
+      <div class="skill-card"><span class="skill-icon">🗃️</span><span class="skill-name">SQL</span></div>
     </div>
-    <div id="tab-redes" class="skills-panel">
-      <div class="skill-card"><span class="skill-icon">🔌</span><span class="skill-name">Switches</span></div>
-      <div class="skill-card"><span class="skill-icon">📡</span><span class="skill-name">Roteadores</span></div>
-      <div class="skill-card"><span class="skill-icon">🖥️</span><span class="skill-name">Suporte Técnico</span></div>
-      <div class="skill-card"><span class="skill-icon">🔧</span><span class="skill-name">Hardware</span></div>
-      <div class="skill-card"><span class="skill-icon">🛡️</span><span class="skill-name">Segurança</span></div>
-      <div class="skill-card"><span class="skill-icon">📊</span><span class="skill-name">Monitoramento</span></div>
+
+    <div id="tab-tools" class="skills-panel">
+      <div class="skill-card"><span class="skill-icon">🖊️</span><span class="skill-name">VS Code</span></div>
+      <div class="skill-card"><span class="skill-icon">📊</span><span class="skill-name">Excel</span></div>
+      <div class="skill-card"><span class="skill-icon">🎬</span><span class="skill-name">Adobe Premiere</span></div>
+      <div class="skill-card"><span class="skill-icon">✨</span><span class="skill-name">After Effects</span></div>
+      <div class="skill-card"><span class="skill-icon">🎨</span><span class="skill-name">Blender</span></div>
     </div>
+
   </div>
 </section>
 
@@ -1045,30 +1089,41 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
       <h2 class="section-title">Educação & <span class="gradient-text">Certificações</span></h2>
     </div>
     <div class="edu-grid">
+
       <div class="edu-card reveal">
         <div class="edu-type">Graduação em andamento</div>
         <h3>Análise e Desenvolvimento de Sistemas</h3>
-        <p>Cruzeiro do Sul — São Paulo</p>
-        <span class="edu-badge">2025 — 2027</span>
+        <p>Faculdade Cruzeiro do Sul — São Paulo</p>
+        <span class="edu-badge">2025 — 2026</span>
       </div>
+
       <div class="edu-card reveal">
-        <div class="edu-type">Certificação</div>
-        <h3>Python / Java / JS avançado –</h3>
-        <p>...</p>
-        <span class="edu-badge">em progresso</span>
+        <div class="edu-type">Trilha de Certificações 2026</div>
+        <h3>Roadmap de Certificações</h3>
+        <p>Em andamento — do básico ao avançado</p>
+        <ul class="cert-list">
+          <li>Cisco IT Essentials (NetAcad) — gratuito, oficial Cisco</li>
+          <li>Microsoft Learn — Trilhas oficiais com badges digitais</li>
+          <li>Google Cybersecurity Certificate (Coursera)</li>
+          <li>AWS Cloud Practitioner (CLF-C02)</li>
+          <li>CompTIA Security+ — planejado</li>
+        </ul>
       </div>
+
       <div class="edu-card cert-future reveal">
-        <div class="edu-type" style="color:var(--muted)">Em breve</div>
-        <h3 style="color:var(--muted)">AWS Certified Solutions Architect / Developer / Cloud Practitioner</h3>
+        <div class="edu-type" style="color:var(--muted)">Meta — 2026</div>
+        <h3 style="color:var(--muted)">AWS Cloud Practitioner</h3>
         <p style="color:var(--muted)">Amazon Web Services — Fundamentos de Cloud</p>
-        <span class="edu-badge" style="opacity:0.5">Planejado · 2026</span>
+        <span class="edu-badge" style="opacity:0.5">CLF-C02 · Planejado</span>
       </div>
+
       <div class="edu-card cert-future reveal">
-        <div class="edu-type" style="color:var(--muted)">Em breve</div>
+        <div class="edu-type" style="color:var(--muted)">Meta — 2026</div>
         <h3 style="color:var(--muted)">CompTIA Security+</h3>
-        <p style="color:var(--muted)">base de segurança TI</p>
-        <span class="edu-badge" style="opacity:0.5">Planejado · 2026</span>
+        <p style="color:var(--muted)">Segurança da Informação — Certificação internacional</p>
+        <span class="edu-badge" style="opacity:0.5">SY0-701 · Planejado</span>
       </div>
+
     </div>
   </div>
 </section>
@@ -1079,6 +1134,7 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
     <div class="contato-inner reveal">
       <div class="contato-info">
         <p class="section-label">Contato</p>
+        <div class="open-to-work">Open to Work — Suporte TI · Infraestrutura Jr · SOC N1</div>
         <h2>Vamos construir o futuro <span class="gradient-text">juntos?</span></h2>
         <p>Estou disponível para oportunidades em TI, estágios, projetos ou uma boa conversa sobre tecnologia. Escolha o canal que preferir!</p>
       </div>
@@ -1087,37 +1143,37 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
           <div class="contato-link-icon">✉️</div>
           <div class="contato-link-text">
             <small>Email</small>
-            <span>📧</span>
+            <span>felipeplima2007@gmail.com</span>
           </div>
         </a>
-        <a href="https://www.linkedin.com/in/felipe-pereira-lima-35904b305/" target="_blank" class="contato-link">
+        <a href="https://linkedin.com/in/limaxx" target="_blank" class="contato-link">
           <div class="contato-link-icon">💼</div>
           <div class="contato-link-text">
             <small>LinkedIn</small>
-            <span>Limaxx</span>
+            <span>/in/limaxx</span>
           </div>
         </a>
         <a href="https://github.com/pkeddits" target="_blank" class="contato-link">
           <div class="contato-link-icon">🐙</div>
           <div class="contato-link-text">
             <small>GitHub</small>
-            <span>github</span>
+            <span>github.com/pkeddits</span>
           </div>
         </a>
-        <a href="https://www.instagram.com/__limaxx_/" target="_blank" class="contato-link">
-          <div class="contato-link-icon">📸</div>
+        <a href="https://limaxx.space" target="_blank" class="contato-link">
+          <div class="contato-link-icon">🌐</div>
           <div class="contato-link-text">
-            <small>Instagram</small>
-            <span>Limaxx</span>
+            <small>Site</small>
+            <span>limaxx.space</span>
           </div>
         </a>
       </div>
       <div class="contato-cta">
-        <a href="felipeplima2007@gmail.com" class="btn-primary">
+        <a href="mailto:felipeplima2007@gmail.com" class="btn-primary">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Enviar Email
         </a>
-        <a href="https://www.linkedin.com/in/felipe-pereira-lima-35904b305/" target="_blank" class="btn-outline">Ver LinkedIn →</a>
+        <a href="https://linkedin.com/in/limaxx" target="_blank" class="btn-outline">Ver LinkedIn →</a>
       </div>
     </div>
   </div>
@@ -1125,8 +1181,8 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
 
 <!-- FOOTER -->
 <footer>
-  <p>Desenvolvido com <span>♥</span> por <span>Felipe</span> · 2026</p>
-  <p style="margin-top:0.5rem;font-size:0.8rem;">Feito com HTML, CSS & JavaScript e API puro</p>
+  <p>Desenvolvido com <span>♥</span> por <span>Felipe Lima</span> · 2025</p>
+  <p style="margin-top:0.5rem;font-size:0.8rem;">Feito com HTML, CSS & JavaScript puro · <span>limaxx.space</span></p>
 </footer>
 
 <!-- CHATBOT -->
@@ -1154,11 +1210,6 @@ O objetivo do projeto é ajudar pessoas a melhorarem sua alimentação e saúde 
   </div>
 </div>
 
-<!--
-  SCRIPTS — carregados no final do body para não bloquear a renderização.
-  ui.js: efeitos visuais (typed, scroll reveal, tabs, menu mobile)
-  chatbot.js: lógica do chat (comunica com o backend — sem API key aqui)
--->
 <script src="ui.js"></script>
 <script src="chatbot.js"></script>
 

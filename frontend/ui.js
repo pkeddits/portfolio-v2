@@ -1,5 +1,5 @@
 /**
- * assets/js/ui.js
+ * ui.js
  * Módulo de interações da UI — separado do chatbot para melhor organização.
  * Contém: efeito de digitação, scroll reveal, abas de skills, menu mobile.
  */
@@ -8,7 +8,7 @@
 
 // ─── Efeito de Digitação (Hero) ───────────────────────────────────────────────
 
-const TYPED_WORDS = ['Desenvolvedor', 'Cloud & Infra', 'Tecnologia', 'Full Stack', 'DevOps'];
+const TYPED_WORDS = ['Cloud & Infra', 'Cybersecurity', 'Linux & Infra', 'Python Dev', 'Dev Web'];
 
 let currentWordIndex = 0;
 let currentCharIndex = 0;
@@ -72,7 +72,7 @@ function initScrollReveal() {
 // ─── Abas de Skills ──────────────────────────────────────────────────────────
 
 /**
- * Alterna entre os painéis de habilidades (Cloud, Dev, Redes).
+ * Alterna entre os painéis de habilidades.
  *
  * @param {string} tabId - ID da aba (sem o prefixo "tab-")
  * @param {HTMLElement} clickedBtn - Botão que foi clicado
@@ -99,7 +99,6 @@ function toggleMobileMenu() {
 }
 
 // ─── Exposição Global (necessária para handlers inline no HTML) ──────────────
-// Apenas as funções chamadas via atributos onclick precisam estar no escopo global.
 
 window.switchTab = switchSkillTab;
 window.toggleMenu = toggleMobileMenu;
