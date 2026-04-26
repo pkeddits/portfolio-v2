@@ -1,99 +1,113 @@
-# Felipe — Portfólio v2
+<div align="center">
 
-Site de portfólio pessoal com chatbot integrado via IA, arquitetura full-stack e deploy em produção.
+<img src="frontend/assets/cartoons/18.png" width="120" alt="Felipe Lima" style="border-radius:50%"/>
 
-🔗 **[https://limaxx.space](https://limaxx.space)**
+# Felipe Lima · Portfolio v2
 
----
+**Cloud · Cybersecurity · Infrastructure · Dev Web**
 
-## Sobre o projeto
+[![Site](https://img.shields.io/badge/🌐_limaxx.space-live-F5A623?style=for-the-badge)](https://limaxx.space)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-limaxx-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/limaxx)
+[![GitHub](https://img.shields.io/badge/GitHub-pkeddits-181717?style=for-the-badge&logo=github)](https://github.com/pkeddits)
 
-Portfólio desenvolvido do zero com foco em apresentar minha trajetória, projetos e habilidades na área de tecnologia. O diferencial desta versão é a integração de um assistente virtual com IA que responde perguntas sobre minha carreira em tempo real, com arquitetura separada entre frontend e backend — cada um com seu próprio deploy em produção.
-
----
-
-## Funcionalidades
-
-- Apresentação de projetos, skills e experiência
-- Efeito de digitação animado na seção hero
-- Scroll reveal nos elementos da página
-- Chatbot com IA integrada (Groq API + LLaMA 3)
-- Design responsivo para mobile e desktop
-- Navegação mobile com menu hambúrguer
-- Abas de skills por categoria
+</div>
 
 ---
 
-## Arquitetura
+## ✨ Sobre o projeto
+
+Portfólio pessoal full-stack desenvolvido do zero — apresentando minha transição de carreira para **Cloud Computing, Cybersecurity e Infraestrutura de TI**, com background em desenvolvimento web como diferencial técnico.
+
+O diferencial desta versão é o **chatbot com IA integrada** que responde perguntas sobre minha carreira em tempo real, com arquitetura separada entre frontend e backend, cada um com seu próprio deploy em produção.
+
+---
+
+## 🚀 Funcionalidades
+
+| Feature | Descrição |
+|---|---|
+| 🤖 **AI Chatbot** | Assistente virtual com Groq API + LLaMA 3, responde em PT e EN |
+| ✍️ **Typed Effect** | Efeito de digitação animado na seção hero |
+| 🎞️ **Scroll Reveal** | Animações suaves ao rolar a página |
+| 🌓 **Dark / Light** | Alternância de tema com preferência salva |
+| 🌍 **PT / EN** | Tradução completa do site com um clique |
+| 📱 **Responsivo** | Layout otimizado para mobile e desktop |
+| 🎨 **Mascote** | Personagem cartoon em todas as seções |
+
+---
+
+## 🏗️ Arquitetura
 
 ```
 portfolio-v2/
 ├── frontend/
-│   ├── index.html       # Estrutura e estilos do site
-│   ├── ui.js            # Animações e interações da interface
-│   └── chatbot.js       # Lógica do chat e comunicação com o backend
+│   ├── index.html          # HTML + CSS completo (single file)
+│   ├── ui.js               # Animações, scroll reveal, typed effect, menu mobile
+│   ├── chatbot.js          # Lógica do chat e comunicação com o backend
+│   ├── favicon.svg         # Ícone personalizado com cartoon
+│   └── assets/
+│       ├── cartoons/       # PNGs do mascote (por seção)
+│       └── covers/         # Capas SVG dos projetos
 │
 └── backend/
-    ├── server.js                      # Ponto de entrada — Express + middlewares
+    ├── server.js                    # Express + middlewares + trust proxy
     ├── config/
-    │   └── env.js                     # Validação de variáveis de ambiente
+    │   └── env.js                   # Validação de variáveis de ambiente
     ├── controllers/
-    │   └── chatController.js          # Handler do endpoint de chat
+    │   └── chatController.js        # Handler POST /api/chat
     ├── middleware/
-    │   └── errorHandler.js            # Tratamento global de erros
+    │   └── errorHandler.js          # Tratamento global de erros
     ├── routes/
-    │   └── api.js                     # Definição das rotas da API
+    │   └── api.js                   # Rotas + rate limiting
     └── services/
-    └── claudeService.js   # Integração com a API do Groq (LLaMA 3).
-                           # O arquivo mantém o nome original "claudeService"
-                           # pois foi criado durante o desenvolvimento com a
-                           # API da Anthropic (Claude). Ao descobrir que era
-                           # paga, a integração foi migrada para o Groq,
-                           # que oferece acesso gratuito ao LLaMA 3.
+        └── claudeService.js         # Integração Groq API (LLaMA 3.3 70B)
+                                     # Nota: nome mantido do dev inicial com Anthropic
 ```
 
 ---
 
-## Stack
+## 🛠️ Stack
 
 **Frontend**
-- HTML5, CSS3, JavaScript puro (sem frameworks)
-- Deploy: Vercel
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
 **Backend**
-- Node.js + Express 4
-- Groq SDK (LLaMA 3.3 70B)
-- Deploy: Railway
 
-**Ferramentas**
-- Git & GitHub para versionamento
-- Nodemon para desenvolvimento local
-- CORS configurado por ambiente
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq_API-F55036?style=flat&logo=groq&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat&logo=railway&logoColor=white)
 
 ---
 
-## Como rodar localmente
+## ⚙️ Como rodar localmente
 
 ### Pré-requisitos
 
 - Node.js 18+
-- Conta no [Groq](https://console.groq.com) para obter a API key (gratuito)
-- Extensão Live Server no VS Code (para o frontend)
+- Conta no [Groq Console](https://console.groq.com) (gratuito) para obter a API key
+- Extensão Live Server no VS Code
 
-### Backend
+### 1. Clone o repositório
 
 ```bash
-# Entre na pasta do backend
+git clone https://github.com/pkeddits/portfolio-v2.git
+cd portfolio-v2
+```
+
+### 2. Configure o backend
+
+```bash
 cd backend
-
-# Instale as dependências
 npm install
-
-# Crie o arquivo de variáveis de ambiente
 cp .env.example .env
 ```
 
-Edite o `.env` com suas credenciais:
+Edite o `.env`:
 
 ```env
 GROQ_API_KEY=sua_chave_aqui
@@ -103,65 +117,80 @@ PORT=3001
 ```
 
 ```bash
-# Rode o servidor
 npm run dev
 ```
 
-O backend estará disponível em `http://localhost:3001`.
+### 3. Rode o frontend
 
-### Frontend
-
-Abra o `frontend/index.html` com o **Live Server** do VS Code. O site estará disponível em `http://127.0.0.1:5500`.
+Abra `frontend/index.html` com o **Live Server** do VS Code.
+O site estará em `http://127.0.0.1:5500`.
 
 ---
 
-## Deploy em produção
+## 🌐 Deploy em produção
 
 | Parte | Plataforma | URL |
 |---|---|---|
-| Frontend | Vercel | portfolio-v2-one-tan-53.vercel.app |
+| Frontend | Vercel | [limaxx.space](https://limaxx.space) |
 | Backend | Railway | portfolio-v2-production-895e.up.railway.app |
 
-### Variáveis de ambiente no Railway
+### Variáveis de ambiente (Railway)
 
 ```env
 GROQ_API_KEY=sua_chave_aqui
-CORS_ORIGIN=https://portfolio-v2-one-tan-53.vercel.app
+CORS_ORIGIN=https://limaxx.space
 NODE_ENV=production
 PORT=3001
 ```
 
 ---
 
-## API
+## 📡 API
 
-### POST /api/chat
+### `POST /api/chat`
 
 Recebe o histórico da conversa e retorna a resposta do assistente.
 
-**Body:**
+**Request:**
 ```json
 {
   "history": [
-    { "role": "user", "content": "Quais são suas skills?" }
+    { "role": "user", "content": "What are your skills?" }
   ]
 }
 ```
 
-**Resposta:**
+**Response:**
 ```json
 {
-  "reply": "Felipe tem experiência com HTML, CSS, JavaScript..."
+  "reply": "Felipe is focused on Cloud, Cybersecurity and Infrastructure..."
 }
+```
+
+### `GET /api/health`
+
+```json
+{ "status": "ok", "timestamp": "2026-04-26T..." }
 ```
 
 ---
 
-## Contato
+## 📬 Contato
 
-- GitHub: [github.com/pkeddits](https://github.com/pkeddits)
-- LinkedIn: [linkedin.com/in/felipe](https://linkedin.com/in/felipe)
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-felipeplima2007@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:felipeplima2007@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-/in/limaxx-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/limaxx)
+[![Site](https://img.shields.io/badge/Site-limaxx.space-F5A623?style=for-the-badge&logo=vercel&logoColor=white)](https://limaxx.space)
+
+</div>
 
 ---
 
-*Desenvolvido com HTML, CSS & JavaScript — 2025*
+<div align="center">
+
+Desenvolvido com ♥ por **Felipe Lima** · 2026
+
+*HTML · CSS · JavaScript · Node.js · Groq API*
+
+</div>
