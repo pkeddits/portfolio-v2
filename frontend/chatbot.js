@@ -1,7 +1,6 @@
 'use strict';
 
-const API_BASE_URL = 'https://portfolio-v2-production-895e.up.railway.app';
-const CHAT_ENDPOINT = `${API_BASE_URL}/api/chat`;
+const CHAT_ENDPOINT = '/api/chat';
 
 const chatHistory = [];
 let isWaitingResponse = false;
