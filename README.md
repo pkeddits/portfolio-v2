@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="frontend/assets/cartoons/18.png" width="120" alt="Felipe Lima" style="border-radius:50%"/>
+<img src="frontend/assets/cartoons/18.png" width="120" alt="Felipe Lima"/>
 
 # Felipe Lima · Portfolio v2
 
@@ -18,7 +18,7 @@
 
 Portfólio pessoal full-stack desenvolvido do zero — apresentando minha transição de carreira para **Cloud Computing, Cybersecurity e Infraestrutura de TI**, com background em desenvolvimento web como diferencial técnico.
 
-O diferencial desta versão é o **chatbot com IA integrada** que responde perguntas sobre minha carreira em tempo real, com arquitetura separada entre frontend e backend, cada um com seu próprio deploy em produção.
+O diferencial desta versão é o **chatbot com IA integrada** que responde perguntas sobre minha carreira em tempo real, com backend serverless via Vercel Functions.
 
 ---
 
@@ -40,28 +40,18 @@ O diferencial desta versão é o **chatbot com IA integrada** que responde pergu
 
 ```
 portfolio-v2/
-├── frontend/
-│   ├── index.html          # HTML + CSS completo (single file)
-│   ├── ui.js               # Animações, scroll reveal, typed effect, menu mobile
-│   ├── chatbot.js          # Lógica do chat e comunicação com o backend
-│   ├── favicon.svg         # Ícone personalizado com cartoon
-│   └── assets/
-│       ├── cartoons/       # PNGs do mascote (por seção)
-│       └── covers/         # Capas SVG dos projetos
-│
-└── backend/
-    ├── server.js                    # Express + middlewares + trust proxy
-    ├── config/
-    │   └── env.js                   # Validação de variáveis de ambiente
-    ├── controllers/
-    │   └── chatController.js        # Handler POST /api/chat
-    ├── middleware/
-    │   └── errorHandler.js          # Tratamento global de erros
-    ├── routes/
-    │   └── api.js                   # Rotas + rate limiting
-    └── services/
-        └── claudeService.js         # Integração Groq API (LLaMA 3.3 70B)
-                                     # Nota: nome mantido do dev inicial com Anthropic
+└── frontend/
+    ├── index.html          # HTML + CSS completo
+    ├── ui.js               # Animações, scroll reveal, typed effect, menu mobile
+    ├── chatbot.js          # Lógica do chat
+    ├── favicon.svg         # Ícone personalizado com cartoon
+    ├── vercel.json         # Configuração das Vercel Functions
+    ├── package.json        # Dependência do groq-sdk
+    ├── assets/
+    │   ├── cartoons/       # PNGs do mascote (por seção)
+    │   └── covers/         # Capas SVG dos projetos
+    └── api/
+        └── chat.js         # Vercel Function — integração Groq API (LLaMA 3.3 70B)
 ```
 
 ---
@@ -73,14 +63,12 @@ portfolio-v2/
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
-**Backend**
+**Backend (Serverless)**
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq_API-F55036?style=flat&logo=groq&logoColor=white)
-![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat&logo=railway&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq_API-F55036?style=flat)
+![Vercel](https://img.shields.io/badge/Vercel_Functions-000000?style=flat&logo=vercel&logoColor=white)
 
 ---
 
@@ -89,58 +77,54 @@ portfolio-v2/
 ### Pré-requisitos
 
 - Node.js 18+
-- Conta no [Groq Console](https://console.groq.com) (gratuito) para obter a API key
-- Extensão Live Server no VS Code
+- Conta no [Groq Console](https://console.groq.com) (gratuito)
+- Vercel CLI
 
 ### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/pkeddits/portfolio-v2.git
-cd portfolio-v2
+cd portfolio-v2/frontend
 ```
 
-### 2. Configure o backend
+### 2. Instale as dependências
 
 ```bash
-cd backend
 npm install
-cp .env.example .env
 ```
 
-Edite o `.env`:
+### 3. Configure as variáveis de ambiente
+
+Crie um arquivo `.env.local` na pasta `frontend/`:
 
 ```env
 GROQ_API_KEY=sua_chave_aqui
-CORS_ORIGIN=http://127.0.0.1:5500
-NODE_ENV=development
-PORT=3001
 ```
+
+### 4. Rode com Vercel CLI
 
 ```bash
-npm run dev
+npx vercel dev
 ```
 
-### 3. Rode o frontend
-
-Abra `frontend/index.html` com o **Live Server** do VS Code.
-O site estará em `http://127.0.0.1:5500`.
+O site estará disponível em `http://localhost:3000`.
 
 ---
 
 ## 🌐 Deploy em produção
 
+Tudo roda na **Vercel** — frontend e backend no mesmo projeto.
+
 | Parte | Plataforma | URL |
 |---|---|---|
-| Frontend | Vercel | [limaxx.space](https://limaxx.space) |
-| Backend | Railway | portfolio-v2-production-895e.up.railway.app |
+| Frontend + API | Vercel | [limaxx.space](https://limaxx.space) |
 
-### Variáveis de ambiente (Railway)
+### Variáveis de ambiente (Vercel)
 
-```env
+Em **Settings → Environment Variables**:
+
+```
 GROQ_API_KEY=sua_chave_aqui
-CORS_ORIGIN=https://limaxx.space
-NODE_ENV=production
-PORT=3001
 ```
 
 ---
@@ -148,8 +132,6 @@ PORT=3001
 ## 📡 API
 
 ### `POST /api/chat`
-
-Recebe o histórico da conversa e retorna a resposta do assistente.
 
 **Request:**
 ```json
@@ -167,12 +149,6 @@ Recebe o histórico da conversa e retorna a resposta do assistente.
 }
 ```
 
-### `GET /api/health`
-
-```json
-{ "status": "ok", "timestamp": "2026-04-26T..." }
-```
-
 ---
 
 ## 📬 Contato
@@ -181,7 +157,7 @@ Recebe o histórico da conversa e retorna a resposta do assistente.
 
 [![Email](https://img.shields.io/badge/Email-felipeplima2007@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:felipeplima2007@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-/in/limaxx-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/limaxx)
-[![Site](https://img.shields.io/badge/Site-limaxx.space-F5A623?style=for-the-badge&logo=vercel&logoColor=white)](https://limaxx.space)
+[![Site](https://img.shields.io/badge/Site-limaxx.space-F5A623?style=for-the-badge)](https://limaxx.space)
 
 </div>
 
@@ -191,6 +167,6 @@ Recebe o histórico da conversa e retorna a resposta do assistente.
 
 Desenvolvido com ♥ por **Felipe Lima** · 2026
 
-*HTML · CSS · JavaScript · Node.js · Groq API*
+*HTML · CSS · JavaScript · Node.js · Groq API · Vercel*
 
 </div>
